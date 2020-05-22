@@ -9,7 +9,7 @@ from PageObjects.SignUpPage import SignUpPage
 class LoginTest(unittest.TestCase):
 
     baseURL="https://testauth.digicollect.com/"
-    driver = webdriver.Chrome(executable_path="C:\\Users\\Vandana Mallaiah\\PycharmProjects\\loginpage\\Drivers\\chromedriver.exe")
+    driver = webdriver.Chrome(executable_path="..\\Drivers\\chromedriver.exe")
 
     @classmethod
     def setUpClass(cls):
@@ -20,7 +20,7 @@ class LoginTest(unittest.TestCase):
         sp=SignUpPage(self.driver)
         sp.click_signUp()
         time.sleep(3)
-        self.driver.save_screenshot("C:\\Users\\Vandana Mallaiah\\PycharmProjects\\loginpage\\Screenshots\\signuppage.png")
+        self.driver.save_screenshot("..\\Screenshots\\signuppage.png")
         self.assertEqual("DigiCollect CRM", self.driver.title, "web pae title is not matching")
 
     @classmethod

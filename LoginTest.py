@@ -11,7 +11,7 @@ class LoginTest(unittest.TestCase):
     baseURL="https://testauth.digicollect.com/"
     email ="mandar.asp5@gmail.com"
     password ="123456789"
-    driver = webdriver.Chrome(executable_path="C:\\Users\\Vandana Mallaiah\\PycharmProjects\\loginpage\\Drivers\\chromedriver.exe")
+    driver = webdriver.Chrome(executable_path="..\\Drivers\\chromedriver.exe")
 
     @classmethod
     def setUpClass(cls):
@@ -24,7 +24,7 @@ class LoginTest(unittest.TestCase):
         lp.setPassword(self.password)
         lp.clickSignin()
         time.sleep(3)
-        self.driver.save_screenshot("C:\\Users\\Vandana Mallaiah\\PycharmProjects\\loginpage\\Screenshots\\homepage.png")
+        self.driver.save_screenshot("C:..\\Screenshots\\homepage.png")
         self.assertEqual("DigiCollect CRM", self.driver.title, "web page title is not matching")
 
     @classmethod
@@ -33,7 +33,7 @@ class LoginTest(unittest.TestCase):
 
 
 if __name__=="__main__":
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:\\Users\\Vandana Mallaiah\\PycharmProjects\\loginpage\\Reports'))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='..\\Reports'))
 
 
 
